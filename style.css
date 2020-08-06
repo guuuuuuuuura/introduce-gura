@@ -64,7 +64,7 @@ body {
                     }
         /* backimg */
         #backimg {
-            background: linear-gradient(to top, rgba(255, 255, 255, 0.199) 0%,rgba(255, 255, 255, 0.178)), url(../media/sample.PNG) no-repeat center ;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.199) 0%,rgba(255, 255, 255, 0.178)), url(sample.PNG) no-repeat center ;
             background-size: cover;
             width: 100%;
             max-height: 300px;
@@ -144,7 +144,7 @@ body {
                     }
         /* bigpara */
         #bigpara {
-            background: linear-gradient(to top, rgba(80, 80, 80, 0.418) 0%,rgba(255, 255, 255, 0.274)), url(../media/westwoodlake.JPG) no-repeat center ;
+            background: linear-gradient(to top, rgba(80, 80, 80, 0.418) 0%,rgba(255, 255, 255, 0.274)), url(westwoodlake.JPG) no-repeat center ;
             background-size: cover;
             max-height: 120px;
             padding: 10% 10px;
