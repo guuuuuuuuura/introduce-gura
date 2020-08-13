@@ -42,10 +42,10 @@ $(function(){
     var effect_time = 900; // エフェクトの時間(ms) 1秒なら1000
 
     //親要素と子要素のcssを定義
-    $('.card').css({
+    $('#cardwrap').css({
         opacity: 0
     });
-    $('.card').children().each(function(){
+    $('#cardwrap').children().each(function(){
         $(this).css({
             opacity: 0,
             transform: 'translateY('+ effect_move +'px)',
@@ -60,7 +60,7 @@ $(function(){
         var effect_pos = scroll_btm - effect_btm;
 
         //エフェクトが発動したとき、子要素をずらしてフェードさせる
-        $('.card').each( function() {
+        $('#cardwrap').each( function() {
             var this_pos = $(this).offset().top;
             if ( effect_pos > this_pos ) {
                 $(this).css({
