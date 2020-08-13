@@ -1,7 +1,6 @@
 $(function(){
     var backimg = $('#backimg');
-        backimg.hide().fadeIn(1300,'easeInQuad')
-
+        backimg.hide().fadeIn(1600,'easeInQuad')
 });
 
 $(function(){
