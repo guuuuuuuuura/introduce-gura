@@ -272,6 +272,14 @@ body {
                 height: 30px;
                 margin-right: 15px;
             }
+        .snsicon {
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+        .snsicon a img:hover{
+            transform: rotate(360deg);
+            transition-duration: 0.5s;
+        }
 
 /*  PCおよびタブレット向け: 768px~960px  */
 @media screen and (min-width:768px) {
