@@ -1,33 +1,35 @@
 $(function(){
-    var backimg = $('#backimg');
-        backimg.hide().fadeIn(1600,'easeInQuad')
+    $('#experience-click ').click(function(){
+        swal({
+            title: "Oowps!",
+            text: "We're getting ready...",
+            button: "I'll be back",
+        })　
+    });
 });
 
 $(function(){
-    var effect_pos = 180; // 画面下からどの位置でフェードさせるか(px)
-    var effect_move = 50; // どのぐらい要素を動かすか(px)
-    var effect_time = 800; // エフェクトの時間(ms) 1秒なら1000
+    var backimg = $('#backimg');
+        backimg.hide().fadeIn(2000,'easeInQuad')
+});
 
-    // フェードする前のcssを定義
-    $('.imgwrap').css({
-        opacity: 0,
-        transform: 'translateY('+ effect_move +'px)',
-        transition: effect_time + 'ms'
-    });
+$(function(){
+    var effect_pos = 180; 
+    var effect_move = 50; 
+    var effect_time = 800; 
 
-    // スクロールまたはロードするたびに実行
     $(window).on('scroll load', function(){
         var scroll_top = $(this).scrollTop();
         var scroll_btm = scroll_top + $(this).height();
         effect_pos = scroll_btm - effect_pos;
 
-        // effect_posがthis_posを超えたとき、エフェクトが発動
         $('.imgwrap').each( function() {
             var this_pos = $(this).offset().top;
             if ( effect_pos > this_pos ) {
                 $(this).css({
                     opacity: 1,
-                    transform: 'translateY(0)'
+                    transform: 'translateY(0)',
+                    transition: effect_time + 'ms'
                 });
             }
         });
@@ -36,11 +38,10 @@ $(function(){
 
 $(function(){
 
-    var effect_btm = 300; // 画面下からどの位置でフェードさせるか(px)
-    var effect_move = 50; // どのぐらい要素を動かすか(px)
-    var effect_time = 900; // エフェクトの時間(ms) 1秒なら1000
+    var effect_btm = 300; 
+    var effect_move = 130; 
+    var effect_time = 1700; 
 
-    //親要素と子要素のcssを定義
     $('#cardwrap').css({
         opacity: 0
     });
@@ -52,14 +53,12 @@ $(function(){
         });
     });
 
-    // スクロールまたはロードするたびに実行
     $(window).on('scroll load', function(){
         var scroll_top = $(this).scrollTop();
         var scroll_btm = scroll_top + $(this).height();
         var effect_pos = scroll_btm - effect_btm;
 
-        //エフェクトが発動したとき、子要素をずらしてフェードさせる
-        $('#cardwrap').each( function() {
+        $('#cardwrap').each(function() {
             var this_pos = $(this).offset().top;
             if ( effect_pos > this_pos ) {
                 $(this).css({
@@ -79,4 +78,48 @@ $(function(){
     });
 
 });
+
+$(function(){
+    var hov = $('#musiccard');
+    hov.on("mouseover",function() {
+            $('#musiccard h3').html('なりたい自己表現と言葉にできない電撃');
+        });
+
+        hov.on("mouseout",function(){
+            $('#musiccard h3').html('<img src="../media/icon_music.png">Music');
+    });
+});
+
+$(function(){
+    var hov = $('#overseacard');
+        hov.on("mouseover",function() {
+            $('#overseacard h3').html('外に出て気づく内側の強みと弱み');
+        });
+
+        hov.on("mouseout",function(){
+            $('#overseacard h3').html('<img src="../media/icon_oversea.png">Oversea');
+    });
+});
+
+$(function(){
+    var hov = $('#programmingcard');
+        hov.on("mouseover",function() {
+            $('#programmingcard h3').html('未来に広がる可能性と伴う努力');
+        });
+
+        hov.on("mouseout",function(){
+            $('#programmingcard h3').html('<img src="../media/icon_program.png">Oversea');
+    });
+});
+
+$(function(){
+    $('.card a').click(function(){
+        swal({
+            title: "Oowps!",
+            text: "We're getting ready...",
+            button: "I'll be back",
+        })　
+    });
+});
+
 

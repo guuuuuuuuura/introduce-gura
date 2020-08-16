@@ -30,33 +30,37 @@ body {
         /* nav */
         header #navwrap {
             width: 100%;
-            height: 130px;
+            height: 93px;
         }
         header nav {
-            width: 100%;
+            width: inherit;
+            height: inherit;
             position: fixed;
             z-index: 1000;
             background-color: rgb(97, 156, 82);
         }
             header nav h2 {
-                padding: 20px;
-                font-size: 1.7em;
+                padding: 10px 0;
+                font-size: 0.9em;
                 font-weight: 800;
                 color: #fff;
                 
             }
+            header nav ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
                 header nav ul li {
                     width: 33%;
-                    float: left;
-                    position: relative;
                     text-align: center;
                     font-size: 1em;
-                    margin: 10px 0 20px 0;
-                    padding: 10px 0; 
-                    border-right: 1px solid rgba(217, 255, 222, 0.438);
+                    margin-top: 5px;
+                    padding: 10px 0;
+                    border-left: 1px solid rgba(217, 255, 222, 0.438);
                 }
-                    header nav ul li#last {
-                        border-right: none;
+                    header nav ul li#contact {
+                        border-right: 1px solid rgba(217, 255, 222, 0.438);
                     }
                     header nav ul li a {
                         color: #fff;
@@ -64,14 +68,14 @@ body {
                     }
         /* backimg */
         #backimg {
-            background: linear-gradient(to top, rgba(255, 255, 255, 0.199) 0%,rgba(255, 255, 255, 0.178)), url(sample.PNG) no-repeat center ;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.199) 0%,rgba(255, 255, 255, 0.178)), url(../media/sample.PNG) no-repeat center ;
             background-size: cover;
             width: 100%;
-            max-height: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-            #bicontainer {
-                margin: 120px auto;
-            }
             #bicontainer h1 {
                 display: inline;
                 font-size: 1.6em;
@@ -80,9 +84,9 @@ body {
             }
                 #bicontainer h1.cf:after {
                     margin: 15px auto 10px auto;
-                    width: 18%;
-                    height: 2px;
-                    background-color: rgba(82, 175, 94, 0.767);
+                    width: 40%;
+                    height: 1.8px;
+                    background-color: rgb(143, 250, 157);
                 }
             #bicontainer h2 {
                 font-size: 0.8em;
@@ -126,6 +130,9 @@ body {
                 .imgwrap {
                     text-align: center;
                     margin-bottom: 15px;
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: 0ms;
                 }
                     #infocantainer img {
                         max-width: 80%;
@@ -144,7 +151,7 @@ body {
                     }
         /* bigpara */
         #bigpara {
-            background: linear-gradient(to top, rgba(80, 80, 80, 0.418) 0%,rgba(255, 255, 255, 0.274)), url(westwoodlake.JPG) no-repeat center ;
+            background: linear-gradient(to top, rgba(80, 80, 80, 0.418) 0%,rgba(255, 255, 255, 0.274)), url(../media/westwoodlake.JPG) no-repeat center ;
             background-size: cover;
             max-height: 120px;
             padding: 10% 10px;
@@ -169,83 +176,69 @@ body {
                     width: 90%;
                     margin: 0 auto;
                     margin-bottom: 30px;
+                    font-size: 0.9em;
+
+                }
+                .card a {
+                    display: contents;
                     color: #fff;
-                }
-                #musiccard h3 {
-                    padding: 0.8rem;
-                    background-color: rgba(172, 60, 60, 0.815);
-                    /* background: linear-gradient(top rgba(172, 60, 60, 0.815)); */
-                }
-                    #musiccard h3 img {
+                    text-decoration: none;
+                }       
+                        #musiccard h3 {
+                            padding: 0.8rem;
+                            background-color: rgba(172, 60, 60, 0.815);
+                            transition-duration: 460ms;
+                        }
+                            #musiccard h3:hover {
+                                background-color: #fff;
+                                border-top: solid 1px rgb(122, 122, 122);
+                                border-bottom: solid 1px rgb(122, 122, 122);
+                                color: rgba(172, 60, 60, 0.815);
+                            }
+                        #musiccard h3 img {
                         width: 0.8rem;
                         margin-right: 4%;
                         position: relative;
                         top: 0px;
                         z-index: 900;
-                    }
-                #musiccard p {
-                    margin-bottom: 10%;
-                }
-                #overseacard h3 {
-                    padding: 0.8rem;
-                    background-color: rgba(153, 99, 179, 0.815);
-                }
-                    #overseacard h3 img {
-                        width: 1rem;
-                        margin-right: 4%;
-                        position: relative;
-                        top: 2px;
-                        z-index: 900;
-                    }
-                #programmingcard h3 {
-                    padding: 0.8rem;
-                    background-color: rgba(60, 146, 172, 0.815);
-                    /* background: linear-gradient(top rgba(172, 60, 60, 0.815)); */
-                }
-                    #programmingcard h3 img {
-                        width: 1rem;
-                        margin-right: 4%;
-                        position: relative;
-                        top: 0px;
-                        z-index: 900;
-                    }
-                #programmingcard p {
-                    margin-bottom: 10%;
-                }
-                    .cardimg {
-                        width: 100%;
-                        margin-bottom: -1px;
-                        border-radius: 5px 5px 0 0;
-                    }
-                    .cardcontainer {
-                        padding: 10px;
-                        color: black;
-                        font-size: 0.8rem;
-                    }
-                        .cardcontainer h3 { 
-                            margin-bottom: 5%;
-                            font-size: 1em;
                         }
-                            .cardcontainer h3 img {
-                                width: 0.8em;
-                                margin-right: 5px;
+                        #overseacard h3 {
+                            padding: 0.8rem;
+                            background-color: rgba(153, 99, 179, 0.815);
+                            transition-duration: 460ms;
+                        }
+                            #overseacard h3:hover {
+                                background-color: #fff;
+                                border-top: solid 1px rgb(122, 122, 122);
+                                border-bottom: solid 1px rgb(122, 122, 122);
+                                color: rgba(153, 99, 179, 0.815);
+                            }
+                            #overseacard h3 img {
+                                width: 1rem;
+                                margin-right: 4%;
                                 position: relative;
                                 top: 2px;
                                 z-index: 900;
                             }
-                        .cardcontainer a.toexperience {
-                            width: 4rem;
-                            float: right;
-                            display: inline-block;
-                            padding: 0.3rem 0.5rem;
-                            border-radius: 3px;
-                            text-decoration: none;
-                            text-align: center;
-                            font-size: 0.5px;
-                            color: #ffffff;
-                            background-color: rgb(132, 189, 118);
-                            box-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.29);
+                        #programmingcard h3 {
+                            padding: 0.8rem;
+                            background-color: rgba(60, 146, 172, 0.815);
+                            transition-duration: 460ms;
                         }
+                            #programmingcard h3:hover {
+                                background-color: #fff;
+                                border-top: solid 1px rgb(122, 122, 122);
+                                border-bottom: solid 1px rgb(122, 122, 122);
+                                color: rgba(60, 146, 172, 0.815);
+                            }
+                            #programmingcard h3 img {
+                                width: 1rem;
+                                margin-right: 4%;
+                                position: relative;
+                                top: 0px;
+                                z-index: 900;
+                            }
+                            
         /* endline */
         div#endline {
             width: 70%;
@@ -297,7 +290,9 @@ body {
             margin-bottom: 60px;
         }
         #musiccard h3 {
+            height: 180px;
             display: flex;
+            justify-content: center;
             align-items: center;
             padding: 1.5em;
         }
@@ -305,7 +300,9 @@ body {
                 width: 1.3em;
             }
         #overseacard h3 {
+            height: 180px;
             display: flex;
+            justify-content: center;
             align-items: center;
             padding: 1.5em;
         }
@@ -313,7 +310,9 @@ body {
                 width: 1.3em;
             }
         #programmingcard h3 {
+            height: 180px;
             display: flex;
+            justify-content: center;
             align-items: center;
             padding: 1.5em;
         }
@@ -459,7 +458,7 @@ body {
         margin-left: auto;
     }
     #backimg {
-        height: 661px;
+        height: 700px;
         max-height: 700px;
         display: flex;
         justify-content: center;
@@ -471,4 +470,13 @@ body {
         section.card > h3 {
             height: 180px;
         }
+}
+
+/* swal options */
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: rgb(97, 156, 82);
+    font-size: 14px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 }
