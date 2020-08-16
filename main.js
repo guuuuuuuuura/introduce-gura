@@ -86,7 +86,7 @@ $(function(){
         });
 
         hov.on("mouseout",function(){
-            $('#musiccard h3').html('<img src="../media/icon_music.png">Music');
+            $('#musiccard h3').html('<img src="icon_music.png">Music');
     });
 });
 
@@ -97,7 +97,7 @@ $(function(){
         });
 
         hov.on("mouseout",function(){
-            $('#overseacard h3').html('<img src="../media/icon_oversea.png">Oversea');
+            $('#overseacard h3').html('<img src="icon_oversea.png">Oversea');
     });
 });
 
@@ -108,7 +108,7 @@ $(function(){
         });
 
         hov.on("mouseout",function(){
-            $('#programmingcard h3').html('<img src="../media/icon_program.png">Oversea');
+            $('#programmingcard h3').html('<img src="icon_program.png">Oversea');
     });
 });
 
