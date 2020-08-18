@@ -66,6 +66,9 @@ body {
                         color: #fff;
                         text-decoration: none;
                     }
+                        header nav ul li a:hover {
+                            opacity: 0.7;
+                        }
         /* backimg */
         #backimg {
             background: linear-gradient(to top, rgba(255, 255, 255, 0.199) 0%,rgba(255, 255, 255, 0.178)), url(sample.PNG) no-repeat center ;
